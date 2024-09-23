@@ -1,0 +1,154 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    color: #f0f0f0;
+    font-family: 'Orbitron', sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #e63946;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #141414;
+    border-bottom: 2px solid #3dc481;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('cyber-bg.jpg') no-repeat center/cover;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    text-shadow: 0 0 10px #e63946;
+}
+
+.tools-section {
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #3dc481;
+}
+
+.tools-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tool-card {
+    background-color: #1c1c1c;
+    border: 2px solid #3dc481;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.tool-card:hover {
+    transform: scale(1.05);
+    border-color: #e63946;
+}
+
+.footer {
+    padding: 30px;
+    background-color: #0a0a0a;
+    text-align: center;
+}
+
+.glow-text {
+    color: #3dc481;
+    text-shadow: 0 0 8px #3dc481;
+}
+
+/* Glitch Effect */
+.glitch {
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    color: #e63946;
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+    clip: rect(0, 900px, 0, 0);
+}
+
+.glitch:before {
+    animation: glitch 2.5s infinite linear;
+    color: #3dc481;
+    z-index: -1;
+}
+
+.glitch:after {
+    animation: glitch 2.5s infinite linear reverse;
+    color: #e63946;
+    z-index: -2;
+}
+
+@keyframes glitch {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+        transform: skew(0.5deg);
+    }
+    5% {
+        clip: rect(10px, 9999px, 30px, 0);
+        transform: skew(0.8deg);
+    }
+    10% {
+        clip: rect(60px, 9999px, 80px, 0);
+        transform: skew(0.3deg);
+    }
+    20% {
+        clip: rect(20px, 9999px, 70px, 0);
+        transform: skew(0.6deg);
+    }
+    30% {
+        clip: rect(30px, 9999px, 50px, 0);
+        transform: skew(1deg);
+    }
+    40% {
+        clip: rect(50px, 9999px, 90px, 0);
+        transform: skew(0.2deg);
+    }
+}
