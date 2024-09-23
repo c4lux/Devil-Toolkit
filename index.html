@@ -24,6 +24,7 @@
         <p>Modern cybersecurity tools designed to protect you from the digital underworld.</p>
     </section>
 
+    <!-- Existing tools -->
     <section id="tools" class="tools-section">
         <h2 class="section-title glitch" data-text="Our Tools">Our Tools</h2>
         <div class="tools-grid">
@@ -46,6 +47,100 @@
         </div>
     </section>
 
+    <!-- Payload Generator -->
+    <section id="payload-generator" class="tools-section">
+        <h2>Payload Generator</h2>
+        <form id="payload-form">
+            <label for="lhost">LHOST (Your IP):</label>
+            <input type="text" id="lhost" name="lhost" placeholder="Enter your IP">
+
+            <label for="lport">LPORT (Your Port):</label>
+            <input type="text" id="lport" name="lport" placeholder="Enter your port">
+
+            <label for="payload-type">Payload Type:</label>
+            <select id="payload-type" name="payload-type">
+                <option value="bash">Bash</option>
+                <option value="php">PHP</option>
+                <option value="powershell">PowerShell</option>
+                <option value="netcat">Netcat</option>
+                <option value="python">Python</option>
+            </select>
+
+            <button type="submit">Generate Payload</button>
+        </form>
+    </section>
+
+    <!-- Vulnerability Scanning -->
+    <section id="vulnerability-scanning" class="tools-section">
+        <h2>Vulnerability Scanning</h2>
+        <form id="scan-form">
+            <label for="target">Target URL/IP:</label>
+            <input type="text" id="target" name="target" placeholder="Enter URL or IP">
+
+            <div class="scan-tools">
+                <label><input type="checkbox" name="nmap" value="nmap"> Nmap</label>
+                <label><input type="checkbox" name="nikto" value="nikto"> Nikto</label>
+                <label><input type="checkbox" name="nuclei" value="nuclei"> Nuclei</label>
+                <label><input type="checkbox" name="sqlmap" value="sqlmap"> SQLMap</label>
+            </div>
+
+            <button type="submit">Start Scan</button>
+        </form>
+    </section>
+
+    <!-- Metasploit Integration -->
+    <section id="metasploit" class="tools-section">
+        <h2>Metasploit Console</h2>
+        <form id="metasploit-form">
+            <label for="metasploit-lhost">LHOST:</label>
+            <input type="text" id="metasploit-lhost" name="metasploit-lhost" placeholder="Enter LHOST">
+
+            <label for="metasploit-lport">LPORT:</label>
+            <input type="text" id="metasploit-lport" name="metasploit-lport" placeholder="Enter LPORT">
+
+            <label for="rhost">RHOST:</label>
+            <input type="text" id="rhost" name="rhost" placeholder="Enter target RHOST">
+
+            <button type="submit">Launch Metasploit</button>
+        </form>
+        <div id="metasploit-output">
+            <pre>Metasploit session output will be displayed here...</pre>
+        </div>
+    </section>
+
+    <!-- Privilege Escalation Search -->
+    <section id="privilege-escalation" class="tools-section">
+        <h2>Privilege Escalation</h2>
+        <form id="escalation-form">
+            <label for="escalation-query">Search for Methods:</label>
+            <input type="text" id="escalation-query" name="escalation-query" placeholder="Enter query">
+
+            <button type="submit">Search</button>
+        </form>
+        <div id="escalation-results">
+            <ul>
+                <!-- Results will populate here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Exploit Search -->
+    <section id="exploit-search" class="tools-section">
+        <h2>Exploit Search</h2>
+        <form id="exploit-form">
+            <label for="exploit-query">Search for Exploits:</label>
+            <input type="text" id="exploit-query" name="exploit-query" placeholder="Enter query">
+
+            <button type="submit">Search</button>
+        </form>
+        <div id="exploit-results">
+            <ul>
+                <!-- Exploit results will populate here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <p>Designed by <span class="glow-text">c4lux</span> 🔥</p>
     </footer>
